@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code> nahuelfigueroa </code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HelloWord name="Lautaro"/>
+        <MiNombre edad="20"/>
       </header>
+    </div>
+  );
+}
+
+
+function HelloWord(props){
+  return (
+    <div>
+      <h1>"Hola Mundo!!"</h1>
+      <p>{"Hola " + props.name + " Creo esto"}</p>
+    </div>
+  );
+}
+
+function MiNombre(props){
+  return(
+    <div>
+      <h2>Mi nombre es Nahuel</h2>
+      <p>{"Hola, tengo " + props.edad + " años"}</p>
     </div>
   );
 }
